@@ -1,9 +1,10 @@
+/* import google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* import google font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 :root {
     --primary-color: #CDA557;
