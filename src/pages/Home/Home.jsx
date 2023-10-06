@@ -1,7 +1,7 @@
 const Home = () => {
     return (
         <div>
-            <h1 className="text-red-500">This is home</h1>            
+            <h1 className="text-[var(--primary-color)]">This is home</h1>            
         </div>
     );
 };
