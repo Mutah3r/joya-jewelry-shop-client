@@ -50,7 +50,7 @@ const ProfilePopover = () => {
                                             <Link
                                                 key={item.name}
                                                 to={item.href}
-                                                className="flex items-center transition duration-150 ease-in-out hover:bg-gray-100"
+                                                className="flex items-center transition duration-150 ease-in-out bg-white hover:bg-gray-100"
                                             >
                                                 <div className="flex h-10 w-10 shrink-0 items-center justify-center text-white sm:h-12 sm:w-12">
                                                     <item.icon className='text-[var(--primary-color)]' />
