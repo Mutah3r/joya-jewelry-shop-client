@@ -1,0 +1,40 @@
+{
+    "categories": [
+        {
+            "title": "Earrings",
+            "link": "/"
+        },
+        {
+            "title": "Necklaces",
+            "link": "/"
+        },
+        {
+            "title": "Bracelets",
+            "link": "/"
+        },
+        {
+            "title": "Maang Tikka",
+            "link": "/"
+        },
+        {
+            "title": "Rings",
+            "link": "/"
+        },
+        {
+            "title": "Watches",
+            "link": "/"
+        },
+        {
+            "title": "Anklets",
+            "link": "/"
+        },
+        {
+            "title": "Brooches",
+            "link": "/"
+        },
+        {
+            "title": "Jewelry Sets",
+            "link": "/"
+        }
+    ]
+}
