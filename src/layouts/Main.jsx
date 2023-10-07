@@ -2,16 +2,19 @@ import { Outlet } from "react-router-dom";
 import Header from "../components/shared/Header/Header";
 import Navbar from "../components/shared/Navbar/Navbar";
 import Footer from "../components/shared/Footer/Footer";
+import Container from "../components/shared/Container/Container";
 
 const Main = () => {
     return (
         <div className="overflow-hidden">
             <Header />
             <Navbar />
-            <div>
-                <Outlet />
+            <div className="my-8">
+                <Container>
+                    <Outlet />
+                </Container>
             </div>
-            <Footer />         
+            <Footer />
         </div>
     );
 };
