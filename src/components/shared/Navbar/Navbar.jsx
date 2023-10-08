@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import Container from "../Container/Container";
 import ProfilePopover from "./ProfilePopover";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { IoCloseCircleSharp } from "react-icons/io5"
 import { RxHamburgerMenu } from "react-icons/rx"
+import { AuthContext } from "../../../providers/AuthProvider";
+import { BiUser } from "react-icons/bi";
 
 
 const navLinks = [
@@ -17,6 +19,7 @@ const navLinks = [
 
 const Navbar = () => {
     const [navbarOpen, setNavbarOpen] = useState(false);
+    const { user } = useContext(AuthContext);
 
     return (
         <div className="bg-[var(--primary-color)]">
@@ -38,14 +41,18 @@ const Navbar = () => {
                         </ul>
                         <div className="flex flex-row">
                             {/* TODO: Apply conditional rendering here by checking if the user is logged in or not */}
-                            {/* 
-                            <Link to='/' className="flex items-center justify-center border-x border-[#bf9951]">
-                                <BiUser className="text-[24px] flex mx-3 text-white" />
-                            </Link> 
-                            */}
-                            <div className="flex items-center justify-center">
-                                <ProfilePopover />
-                            </div>
+
+                            {!user &&
+                                <Link to='/login' className="flex items-center justify-center border-x border-[#bf9951]">
+                                    <BiUser className="text-[24px] flex mx-3 text-white" />
+                                </Link>
+                            }
+
+                            {user &&
+                                <div className="flex items-center justify-center">
+                                    <ProfilePopover />
+                                </div>
+                            }
                         </div>
                     </div>
                 </div>
@@ -53,11 +60,18 @@ const Navbar = () => {
                 {/* Mobile Navbar */}
                 <div className="flex flex-row justify-between gap-3 lg:hidden py-2">
                     <RxHamburgerMenu className="text-black text-[40px] cursor-pointer" onClick={() => setNavbarOpen(!navbarOpen)} />
-                    <ProfilePopover />
+                    {!user &&
+                        <Link to='/login' className="flex items-center justify-center border-x border-[#bf9951]">
+                            <BiUser className="text-[24px] flex mx-3 text-white" />
+                        </Link>
+                    }
+                    {user &&
+                        <ProfilePopover />
+                    }
                 </div>
 
                 {/* Mobile Navbar Drawer */}
-                <div className={`fixed top-0 left-0 h-screen bg-[var(--primary-color)] w-[250px] px-3 ${navbarOpen ? 'translate-x-0' : '-translate-x-full'} transition-all duration-300`}>
+                <div className={`z-10 fixed top-0 left-0 h-screen bg-[var(--primary-color)] w-[250px] px-3 ${navbarOpen ? 'translate-x-0' : '-translate-x-full'} transition-all duration-300`}>
                     <div className="flex flex-col items-end mt-2">
                         <IoCloseCircleSharp className="cursor-pointer text-black text-[24px]" onClick={() => setNavbarOpen(!navbarOpen)} />
                     </div>
