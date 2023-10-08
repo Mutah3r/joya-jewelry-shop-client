@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { AiFillEyeInvisible, AiFillEye } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 const Register = () => {
     const [showPassword, setShowPassword] = useState(false);
@@ -71,6 +72,9 @@ const Register = () => {
                 </div>
                 <div>
                     <input type="submit" value="Register" className="cursor-pointer w-full hover:opacity-80 transition-opacity duration-500 bg-[var(--primary-color)] px-5 py-3 uppercase text-white" />
+                </div>
+                <div>
+                    <h1 className='text-center text-[16px] text-[#333333]'>Already have an account? <Link to='/login' className='text-[var(--primary-color)] hover:underline'>Login</Link></h1>
                 </div>
             </div>
         </form>
