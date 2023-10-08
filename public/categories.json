@@ -2,39 +2,48 @@
     "categories": [
         {
             "title": "Earrings",
-            "link": "/"
+            "link": "/",
+            "value": "earrings"
         },
         {
             "title": "Necklaces",
-            "link": "/"
+            "link": "/",
+            "value": "necklaces"
         },
         {
             "title": "Bracelets",
-            "link": "/"
+            "link": "/",
+            "value": "bracelets"
         },
         {
             "title": "Maang Tikka",
-            "link": "/"
+            "link": "/",
+            "value": "maangtikka"
         },
         {
             "title": "Rings",
-            "link": "/"
+            "link": "/",
+            "value": "rings"
         },
         {
             "title": "Watches",
-            "link": "/"
+            "link": "/",
+            "value": "watches"
         },
         {
             "title": "Anklets",
-            "link": "/"
+            "link": "/",
+            "value": "anklet"
         },
         {
             "title": "Brooches",
-            "link": "/"
+            "link": "/",
+            "value": "brooches"
         },
         {
             "title": "Jewelry Sets",
-            "link": "/"
+            "link": "/",
+            "value": "jewelrysets"
         }
     ]
 }

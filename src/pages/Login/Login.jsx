@@ -2,6 +2,7 @@ import { useContext, useState } from 'react';
 import { AiFillEyeInvisible, AiFillEye } from 'react-icons/ai';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
@@ -29,7 +30,11 @@ const Login = () => {
             // eslint-disable-next-line no-unused-vars
             .catch((error) => {
                 // TODO: show password error message
-                // Swal.fire('Email or password is invalid');
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Password in invalid!'
+                })
                 // console.log('email or password is invalid');
             });
     }
