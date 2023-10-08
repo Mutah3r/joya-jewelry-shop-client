@@ -1,5 +1,6 @@
 import Carousel from "./Carousel";
 import Categories from "./Categories";
+import DiscountBox from "./DiscountBox";
 import NewArrival from "./NewArrival";
 import TrendingProducts from "./TrendingProducts";
 
@@ -16,6 +17,9 @@ const Home = () => {
             </div>
             <div>
                 <NewArrival />
+            </div>
+            <div>
+                <DiscountBox />
             </div>
             <div>
                 <TrendingProducts />
