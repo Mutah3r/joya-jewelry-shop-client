@@ -8,10 +8,12 @@ import ProductDetails from "../pages/ProductDetails/ProductDetails";
 import AllJewelry from "../pages/AllJewelry/AllJewelry";
 import MyJewelry from "../pages/MyJewelry/MyJewelry";
 import PrivateRoute from "./PrivateRoute";
+import ErrorRoute from "../pages/ErrorRoute/ErrorRoute";
 
 export const router = createBrowserRouter([
     {
         path: '/',
+        errorElement: <ErrorRoute />,
         element: <Main />,
         children: [
             {
