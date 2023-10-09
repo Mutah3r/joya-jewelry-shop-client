@@ -21,7 +21,7 @@ const ProductDetails = () => {
     return (
         <div>
             <div className="my-8 md:my-16 grid gird-cols-1 gap-6 md:grid-cols-2 justify-center ">
-                <div className="border flex justify-center items-center">
+                <div className="border flex justify-center items-center p-2 md:p-4">
                     <img className="w-full max-w-[300px] object-cover" src={prodInfo.photoURL} alt={prodInfo.name} />
                 </div>
                 <div className="flex flex-col gap-2 w-full">

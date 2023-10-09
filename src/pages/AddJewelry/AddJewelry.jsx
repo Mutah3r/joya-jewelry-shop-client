@@ -33,7 +33,7 @@ const AddJewelry = () => {
         const brand = event.target.brand.options[event.target.brand.selectedIndex].text;
         const category = event.target.category.options[event.target.category.selectedIndex].text;
         const description = event.target.description.value;
-        const rating = parseInt(event.target.rating.value);
+        const rating = parseFloat(event.target.rating.value);
         const availability = event.target.availability.options[event.target.availability.selectedIndex].text;
 
         const productInfo = {

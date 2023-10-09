@@ -32,7 +32,8 @@ const NewArrival = () => {
                                     id: prod._id,
                                     name: prod.name,
                                     price: prod.price,
-                                    img: prod.photoURL
+                                    img: prod.photoURL,
+                                    rating: prod.rating
                                 }}
                                 tag={{
                                     text: 'NEW',
