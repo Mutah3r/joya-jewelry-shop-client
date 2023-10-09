@@ -28,7 +28,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/add-jewelry',
-                element: <AddJewelry />
+                element: <PrivateRoute><AddJewelry /></PrivateRoute>
             },
             {
                 path: '/all-jewelry',
