@@ -46,7 +46,8 @@ const AddJewelry = () => {
             rating,
             availability,
             views: 0,
-            addedBy: user.email
+            addedBy: user.email,
+            dateAdded: Date.now()
         }
 
         fetch('http://localhost:5000/add-product', {
@@ -129,7 +130,7 @@ const AddJewelry = () => {
 
                 <div className="text-[#595959] text-[16px] flex flex-col gap-1">
                     <label htmlFor="rating">Rating</label>
-                    <input required min="0" max="5" placeholder="Rating from 0 - 5" className="border focus:outline-none text-[15px] px-4 py-2" type="number" name="rating" id="rating" />
+                    <input required min="0" max="5" step="0.1" placeholder="Rating from 0 - 5" className="border focus:outline-none text-[15px] px-4 py-2" type="number" name="rating" id="rating" />
                 </div>
 
                 <div className="text-[#595959] text-[16px] flex flex-col gap-1">
