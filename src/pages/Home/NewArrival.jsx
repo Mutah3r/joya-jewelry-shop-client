@@ -5,7 +5,7 @@ const NewArrival = () => {
     const [newArrival, setNewArrival] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/new-arrivals')
+        fetch('https://joya-server-716bquqol-mutah3r.vercel.app/new-arrivals')
             .then(res => res.json())
             .then(data => {
                 setNewArrival(data);

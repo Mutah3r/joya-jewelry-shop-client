@@ -5,7 +5,7 @@ const TrendingProducts = () => {
     const [trendingProducts, setTrendingProducts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/trending-products')
+        fetch('https://joya-server-716bquqol-mutah3r.vercel.app/trending-products')
             .then(res => res.json())
             .then(data => {
                 setTrendingProducts(data);

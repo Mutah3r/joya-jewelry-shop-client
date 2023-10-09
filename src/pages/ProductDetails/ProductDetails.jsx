@@ -10,7 +10,7 @@ const ProductDetails = () => {
     const { id } = useParams();
 
     useState(() => {
-        fetch(`http://localhost:5000/products/${id}`)
+        fetch(`https://joya-server-716bquqol-mutah3r.vercel.app/products/${id}`)
             .then(res => res.json())
             .then(data => {
                 setProdInfo(data);

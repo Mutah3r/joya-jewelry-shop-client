@@ -9,7 +9,7 @@ const AddJewelry = () => {
     const { user } = useContext(AuthContext);
 
     useEffect(() => {
-        fetch('http://localhost:5000/brands')
+        fetch('https://joya-server-716bquqol-mutah3r.vercel.app/brands')
             .then(res => res.json())
             .then(data => {
                 setBrands(data);
@@ -50,7 +50,7 @@ const AddJewelry = () => {
             dateAdded: Date.now()
         }
 
-        fetch('http://localhost:5000/add-product', {
+        fetch('https://joya-server-716bquqol-mutah3r.vercel.app/add-product', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

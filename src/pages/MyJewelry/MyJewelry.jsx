@@ -7,7 +7,7 @@ const MyJewelry = () => {
     const { user } = useContext(AuthContext);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products/email/${user?.email}`)
+        fetch(`https://joya-server-716bquqol-mutah3r.vercel.app/products/email/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 setJewelries(data);

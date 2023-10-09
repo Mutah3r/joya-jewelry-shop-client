@@ -55,7 +55,7 @@ const Login = () => {
                     name: result.user.displayName
                 }
 
-                fetch(`http://localhost:5000/users/google/${email}`, {
+                fetch(`https://joya-server-716bquqol-mutah3r.vercel.app/users/google/${email}`, {
                     method: 'PUT',
                     headers: {
                         'content-type': 'application/json',

@@ -5,7 +5,7 @@ const AllJewelry = () => {
     const [jewelries, setJewelries] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://joya-server-716bquqol-mutah3r.vercel.app/products')
             .then(res => res.json())
             .then(data => {
                 setJewelries(data);

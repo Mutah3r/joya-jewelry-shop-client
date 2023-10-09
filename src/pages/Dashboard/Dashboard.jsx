@@ -16,7 +16,7 @@ const Dashboard = () => {
 
     // fetch logged in user info
     useEffect(() => {
-        fetch(`http://localhost:5000/users/${user.email}`)
+        fetch(`https://joya-server-716bquqol-mutah3r.vercel.app/users/${user.email}`)
             .then(res => res.json())
             .then(data => {
                 setUserInfo(data[0]);
@@ -25,7 +25,7 @@ const Dashboard = () => {
 
     // fetch all jewelries info
     useEffect(() => {
-        fetch(`http://localhost:5000/products`)
+        fetch(`https://joya-server-716bquqol-mutah3r.vercel.app/products`)
             .then(res => res.json())
             .then(data => {
                 setAllJewelries(data);
@@ -34,7 +34,7 @@ const Dashboard = () => {
 
     // fetch jewelries of logged in user
     useEffect(() => {
-        fetch(`http://localhost:5000/products/email/${user.email}`)
+        fetch(`https://joya-server-716bquqol-mutah3r.vercel.app/products/email/${user.email}`)
             .then(res => res.json())
             .then(data => {
                 setMyJewelries(data);
@@ -43,7 +43,7 @@ const Dashboard = () => {
 
     // fetch all users info
     useEffect(() => {
-        fetch(`http://localhost:5000/users`)
+        fetch(`https://joya-server-716bquqol-mutah3r.vercel.app/users`)
             .then(res => res.json())
             .then(data => {
                 setAllUsers(data);
