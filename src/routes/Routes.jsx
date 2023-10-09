@@ -7,6 +7,7 @@ import AddJewelry from "../pages/AddJewelry/AddJewelry";
 import ProductDetails from "../pages/ProductDetails/ProductDetails";
 import AllJewelry from "../pages/AllJewelry/AllJewelry";
 import MyJewelry from "../pages/MyJewelry/MyJewelry";
+import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
     {
@@ -35,7 +36,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/my-jewelry',
-                element: <MyJewelry />
+                element: <PrivateRoute><MyJewelry /></PrivateRoute>
             },
             {
                 path: '/products/:id',
