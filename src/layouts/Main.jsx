@@ -6,7 +6,7 @@ import Container from "../components/shared/Container/Container";
 
 const Main = () => {
     return (
-        <div className="overflow-hidden">
+        <div>
             <Header />
             <Navbar />
             <div className="my-8">

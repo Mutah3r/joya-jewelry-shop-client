@@ -51,7 +51,8 @@ const Login = () => {
                 const email = result.user.email;
 
                 const userInfo = {
-                    email
+                    email,
+                    name: result.user.displayName
                 }
 
                 fetch(`http://localhost:5000/users/google/${email}`, {

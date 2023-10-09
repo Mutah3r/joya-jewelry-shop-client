@@ -9,6 +9,7 @@ import AllJewelry from "../pages/AllJewelry/AllJewelry";
 import MyJewelry from "../pages/MyJewelry/MyJewelry";
 import PrivateRoute from "./PrivateRoute";
 import ErrorRoute from "../pages/ErrorRoute/ErrorRoute";
+import Dashboard from "../pages/Dashboard/Dashboard";
 
 export const router = createBrowserRouter([
     {
@@ -43,6 +44,10 @@ export const router = createBrowserRouter([
             {
                 path: '/products/:id',
                 element: <ProductDetails />
+            },
+            {
+                path: '/dashboard',
+                element: <PrivateRoute><Dashboard /></PrivateRoute>
             },
         ]
     }
