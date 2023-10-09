@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { AiOutlineHeart, AiFillStar, AiOutlineStar } from 'react-icons/ai';
 
-const Card = ({ tag }) => {
+const Card = ({ productInfo, tag }) => {
     return (
         <div className="border flex flex-col gap-3 p-5 relative hover:border-[var(--primary-color)] transition-all duration-500">
             { tag &&
@@ -9,14 +9,14 @@ const Card = ({ tag }) => {
             }
             <div className="flex justify-center items-center">
                 <Link to='/'>
-                <img className="h-[200px] w-[200px] object-cover" src="https://htmldemo.net/hiraola/hiraola/assets/images/product/medium-size/1-1.jpg" alt="" />
+                <img className="h-[200px] w-[200px] object-cover" src={productInfo?.img || ''} alt="" />
                 </Link>
             </div>
             <Link to='/'>
-                <h1 className="hover:text-[var(--primary-color)] transition-all duration-300 text-[18px] font-semibold text-[#333333]">Pendent, Made of White Pearl</h1>
+                <h1 className="hover:text-[var(--primary-color)] transition-all duration-300 text-[18px] font-semibold text-[#333333]">{productInfo?.name || ''}</h1>
             </Link>
             <div className="flex justify-between text-[#333333]">
-                <h2>$49.00</h2>
+                <h2>${productInfo?.price || ''}</h2>
                 <p className="hover:text-[var(--primary-color)] transition-all duration-300 text-[18px] cursor-pointer">
                     <AiOutlineHeart />
                 </p>
