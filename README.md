@@ -24,6 +24,10 @@
 - React Icons
 - SweetAlert2
 
+### Admin Login Info:
+- Email: mutaher.shakil@gmail.com
+- Password: Mutaher$
+
 ## Live Link
 - Live Site Link: https://joya-jewelry-app.web.app/
 - Live API Server Link: https://joya-server-716bquqol-mutah3r.vercel.app/
