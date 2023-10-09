@@ -29,6 +29,7 @@ const NewArrival = () => {
                             <Card
                                 key={prod._id}
                                 productInfo={{
+                                    id: prod._id,
                                     name: prod.name,
                                     price: prod.price,
                                     img: prod.photoURL
