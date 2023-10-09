@@ -10,6 +10,7 @@ import MyJewelry from "../pages/MyJewelry/MyJewelry";
 import PrivateRoute from "./PrivateRoute";
 import ErrorRoute from "../pages/ErrorRoute/ErrorRoute";
 import Dashboard from "../pages/Dashboard/Dashboard";
+import Blogs from "../pages/Blogs/Blogs";
 
 export const router = createBrowserRouter([
     {
@@ -44,6 +45,10 @@ export const router = createBrowserRouter([
             {
                 path: '/products/:id',
                 element: <ProductDetails />
+            },
+            {
+                path: '/blogs',
+                element: <Blogs />
             },
             {
                 path: '/dashboard',
